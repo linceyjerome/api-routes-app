@@ -11,7 +11,7 @@ const fetcher = async (url: string) => {
   return data
 }
 
-export default function Person() {
+export default function Info() {
   const { query } = useRouter()
   const { data, error } = useSWR(
     () => query.id && `/api/info/${query.id}`,
@@ -23,7 +23,7 @@ export default function Person() {
 
   return (
     <div>
-      <h1>Les noms</h1>
+
       <p>{data.name}</p>
     </div>
   )
