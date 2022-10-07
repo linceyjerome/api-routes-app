@@ -1,8 +1,12 @@
 import '../styles/globals.css';
-import Info from '../interfaces';
+import PropTypes from "prop-types";
 
-// This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (<>
+
+    <Component {...pageProps} /><script src="../path/to/flowbite/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+  </>
+  )
 }
 
