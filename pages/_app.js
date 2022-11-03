@@ -1,11 +1,14 @@
 import '../styles/globals.css';
-import PropTypes from "prop-types";
+import Layout from '../components/layout'
 
 export default function MyApp({ Component, pageProps }) {
   return (<>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
 
-    <Component {...pageProps} /><script src="../path/to/flowbite/dist/flowbite.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="../path/to/flowbite/dist/flowbite.js"></script>
+
   </>
   )
 }

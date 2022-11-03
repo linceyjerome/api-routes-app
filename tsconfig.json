@@ -15,6 +15,14 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_app.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/_app.js",
+    "components/searchBar.jsx",
+    "components/searchBar.js",
+    "components/searchBar.js"
+  ],
   "exclude": ["node_modules"]
 }

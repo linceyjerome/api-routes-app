@@ -1,6 +1,6 @@
 {
-  "name": "api-routes-app",
-  "version": "0.1.0",
+  "name": "kindergarden-list",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.3",
     "@types/node": "^18.8.1",
     "flowbite": "^1.5.3",
     "flowbite-react": "^0.1.11",
