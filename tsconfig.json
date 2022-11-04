@@ -22,7 +22,8 @@
     "pages/_app.js",
     "components/searchBar.jsx",
     "components/searchBar.js",
-    "components/searchBar.js"
+    "components/Table/index.tsx",
+    "components/KindergardenList.jsx"
   ],
   "exclude": ["node_modules"]
 }

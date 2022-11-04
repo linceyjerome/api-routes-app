@@ -11,6 +11,8 @@
   "dependencies": {
     "@headlessui/react": "^1.7.3",
     "@types/node": "^18.8.1",
+    "devextreme": "22.1.6",
+    "devextreme-react": "22.1.6",
     "flowbite": "^1.5.3",
     "flowbite-react": "^0.1.11",
     "next": "^12.3.1",
