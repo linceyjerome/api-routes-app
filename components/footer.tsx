@@ -1,3 +1,4 @@
+//TODO ADDING REAL LINKS FOR THE FOOTER
 export default function FooterLayout() {
 
     return (

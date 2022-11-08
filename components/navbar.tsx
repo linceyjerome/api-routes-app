@@ -1,7 +1,6 @@
+//TODO : CHANGE NAVBAR WITH VALID TABS
+
 import Link from "next/link";
-import { Router } from "next/router";
-
-
 
 export default function navBar() {
   return (
@@ -47,7 +46,7 @@ export default function navBar() {
                   </Link>
 
                   <Link href="#">
-                    <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">a</a>
+                    <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tab1</a>
                   </Link>
 
                 </div>
