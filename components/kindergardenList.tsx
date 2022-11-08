@@ -1,6 +1,4 @@
-//TODO : implémenter datagrid pour les données
 import 'devextreme/dist/css/dx.light.css';
-
 import {
     Column,
     ColumnChooser,
@@ -10,26 +8,17 @@ import {
     GroupPanel,
     HeaderFilter,
     Pager,
-    Scrolling,
     SearchPanel,
     StateStoring
 } from 'devextreme-react/data-grid';
-
 import { Info } from '../interfaces'
-import useSWR from 'swr'
-import React, { useState } from "react";
-
-const fetcher = (url: RequestInfo | URL) => fetch(url).then((res) => res.json())
-
 type InfoProps = {
     info: Info[]
 }
 
-
 export default function KinderGardenListComponent({ info }: InfoProps) {
 
-    const allowedPageSizes = [5, 10, 20];
-
+    const allowedPageSizes = [5, 10, 15];
     return (
         <>
             <div className='p-3'>
@@ -38,6 +27,7 @@ export default function KinderGardenListComponent({ info }: InfoProps) {
                     allowColumnResizing={true}
                     columnAutoWidth={true}
                     showBorders={true}>
+
                     <ColumnChooser enabled={true} />
                     <HeaderFilter visible={true} />
                     <FilterRow visible={true} />
@@ -46,7 +36,6 @@ export default function KinderGardenListComponent({ info }: InfoProps) {
                     <Pager showPageSizeSelector={true} allowedPageSizes={allowedPageSizes} />
                     <SearchPanel visible={true} placeholder={"Search..."} />
                     <FilterPanel visible={true} />
-
 
 
                     <Column dataField="compagnie_name" caption={"Nom"}></Column>

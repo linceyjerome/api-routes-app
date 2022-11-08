@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import PageComponent from '../components/Page'
+import PageContent from '../components/Page'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
@@ -8,10 +8,9 @@ export default function Index() {
 
   return (
     <>
-      <div className=' w-full h-full my-auto' >
-        <PageComponent key={data.id} info={data} />
+      <div className=' w-full h-full mb-auto' >
+        <PageContent key={data.id} info={data} />
       </div>
-
     </>
   )
 }
