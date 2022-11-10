@@ -1,5 +1,7 @@
 import { Info } from '../interfaces'
-import KinderGardenList from './KindergardenList'
+import List from './List'
+
+import Home from './Home'
 import React from "react";
 
 type InfoProps = {
@@ -10,7 +12,8 @@ export default function pageComponent({ info }: InfoProps) {
 
   return (
     <>
-      <KinderGardenList info={info} />
+      {/* <Home /> */}
+      <List info={info} />
     </>
   )
 }
