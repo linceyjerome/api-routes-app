@@ -1,23 +1,36 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { info } from '../../../data';
+
 import { Info } from '../../../interfaces';
 
 type ResponseError = {
   message: string;
 };
 
-export default function InfoHandler(
+export default async function InfoHandler(
   req: NextApiRequest,
   res: NextApiResponse<Info | ResponseError>
 ) {
   const { query } = req;
   const { id } = query;
-  const filtered = info.filter((i) => i.id === id);
 
-  // User with id exists
-  return filtered.length > 0
-    ? res.status(200).json(filtered[0])
-    : res
+  try {
+    // Fetch data from external Express.js API
+    const response = await fetch(`http://localhost:5000/api/info/${id}`);
+    const data = await response.json();
+
+    if (response.status === 200) {
+      // If data is retrieved successfully
+      return res.status(200).json(data);
+    } else {
+      // If data is not found
+      return res
         .status(404)
-        .json({ message: `User with id: ${id} not found. Check data` });
+        .json({ message: `Item with id: ${id} not found. Check data` });
+    }
+  } catch (error) {
+    // If an error occurs during fetching
+    return res
+      .status(500)
+      .json({ message: 'Failed to fetch data from external API' });
+  }
 }

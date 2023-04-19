@@ -1,7 +1,10 @@
+import { Info } from '../interfaces'
+import Link from "next/link";
 
-
-
-export default function Home() {
+type InfoProps = {
+    info: Info[]
+}
+export default function Home({ info }: InfoProps) {
     return (
         <>
 
@@ -13,7 +16,7 @@ export default function Home() {
                     {/* <!--Title--> */}
                     <div className="font-sans">
 
-                        <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Welcome to thiis page</h1>
+                        <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Welcome to this page</h1>
                         <p className="text-sm md:text-base font-normal text-gray-600">Published one day</p>
                     </div>
 
@@ -29,7 +32,11 @@ export default function Home() {
                     <p className="py-6">gonna have some content here...</p>
 
 
-                    <p className="text-base md:text-sm text-green-500 font-bold">&lt;<a href="/List" className="text-base md:text-sm text-green-500 font-bold no-underline hover:underline">Voir la liste</a>
+
+                    <p className="text-base md:text-sm text-green-500 font-bold">&lt;
+                        <Link href="/InfoList">
+                            voir liste garderie/CPE
+                        </Link>
                     </p>
                 </div>
             </div>

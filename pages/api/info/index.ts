@@ -1,10 +1,17 @@
 import { NextApiResponse, NextApiRequest } from 'next';
-import { info } from '../../../data';
+import axios from 'axios';
 import { Info } from '../../../interfaces';
 
-export default function handler(
+export default async function handler(
   _req: NextApiRequest,
   res: NextApiResponse<Info[]>
 ) {
-  return res.status(200).json(info);
+  try {
+    const response = await axios.get('http://localhost:5000/api/info');
+    const data = response.data;
+    return res.status(200).json(data);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json([]);
+  }
 }

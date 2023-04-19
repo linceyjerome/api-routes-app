@@ -1,6 +1,5 @@
 import { Info } from '../interfaces'
 import List from './List'
-
 import Home from './Home'
 import React from "react";
 
@@ -12,8 +11,9 @@ export default function pageComponent({ info }: InfoProps) {
 
   return (
     <>
-      {/* <Home /> */}
-      <List info={info} />
+      <Home info={info} />
+      {/* <List info={info} /> */}
+
     </>
   )
 }

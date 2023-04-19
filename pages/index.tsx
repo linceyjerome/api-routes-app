@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import PageContent from '../components/Page'
+import PageContent from '../components/page'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 

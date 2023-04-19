@@ -3,12 +3,10 @@
 import Link from "next/link";
 import { Info } from '../interfaces'
 import HelpButton from "./help";
-type InfoProps = {
-  info: Info[]
-}
 
 
-export default function navBar({ info }: InfoProps) {
+
+export default function navBar() {
   return (
 
     <>
@@ -58,7 +56,7 @@ export default function navBar({ info }: InfoProps) {
                     <a className="text-white hover:bg-purple-800 focus:bg-purple-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Info</a>
                   </Link>
 
-                  <Link href="#" >
+                  <Link href="/InfoList" >
                     <a className="text-white hover:bg-purple-800 focus:bg-purple-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Liste des garderies/CPE</a>
                   </Link>
 
