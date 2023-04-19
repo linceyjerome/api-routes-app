@@ -20,6 +20,7 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/_app.js",
+    "pages/InfoList.tsx",
     "components/searchBar.jsx",
     "components/searchBar.js",
     "components/Table/index.tsx",

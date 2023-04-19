@@ -1,10 +1,5 @@
-//TODO : CHANGE NAVBAR WITH VALID TABS
-
 import Link from "next/link";
-import { Info } from '../interfaces'
 import HelpButton from "./help";
-
-
 
 export default function navBar() {
   return (

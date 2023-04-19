@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export default function help() {
+export default function HelpComponent() {
     const [showModal, setShowModal] = React.useState(false);
 
     return (
