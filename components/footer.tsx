@@ -1,4 +1,3 @@
-//TODO ADDING REAL LINKS FOR THE FOOTER
 export default function FooterLayout() {
 
     return (
@@ -8,7 +7,7 @@ export default function FooterLayout() {
                 </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm text-white dark:text-gray-400 sm:mt-0">
                     <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6 ">meow</a>
+                        <a href="https://linceyjerome.com/" target="_blank" rel="noopener noreferrer" className="mr-4 hover:underline md:mr-6 ">meow</a>
                     </li>
                 </ul>
             </footer>

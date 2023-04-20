@@ -53,7 +53,6 @@ export default function HelpComponent() {
                                     <p className="my-4 text-slate-500 text-lg leading-relaxed">
                                         Vous pouvez changer l'ordre des colonnes en faisant des drag and drop.
                                     </p>
-
                                 </div>
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
