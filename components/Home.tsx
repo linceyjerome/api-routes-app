@@ -15,14 +15,17 @@ export default function Home({ info }: InfoProps) {
               Welcome to this page
             </h1>
             <p className="text-sm md:text-base font-normal text-gray-600">
-              Published one day
+              develop by me.
             </p>
           </div>
 
           {/* <!--Post Content--> */}
 
           {/* <!--Lead Para--> */}
-          <p className="py-6">👋 Welcome to this page... need more content</p>
+          <p className="py-6">
+            👋 Welcome to this page... it give you the list of the kindergarden
+            and CPE !
+          </p>
 
           <p className="py-6">gonna have some content here...</p>
 

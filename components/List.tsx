@@ -1,5 +1,3 @@
-//TODO : ADDING MORE CSS OR CHANGE CSS
-
 import 'devextreme/dist/css/dx.light.css';
 import {
   Column,
@@ -13,6 +11,9 @@ import {
   TotalItem,
 } from 'devextreme-react/data-grid';
 import { Info } from '../interfaces';
+import { useState } from 'react';
+import Modal from 'react-modal';
+import Map from './map';
 
 type InfoProps = {
   info: Info[];
@@ -20,6 +21,14 @@ type InfoProps = {
 
 export default function KinderGardenListComponent({ info }: InfoProps) {
   const allowedPageSizes = [5, 10, 15];
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedAddress, setSelectedAddress] = useState(null);
+
+  const handleRowClick = (e) => {
+    setSelectedAddress(`${e.data.adresse}, Canada`);
+    setModalIsOpen(true);
+  };
+
   return (
     <>
       <div className="p-3">
@@ -32,6 +41,7 @@ export default function KinderGardenListComponent({ info }: InfoProps) {
           allowColumnResizing={true}
           columnAutoWidth={true}
           showBorders={true}
+          onRowClick={handleRowClick}
         >
           <ColumnChooser enabled={true} />
           <GroupPanel
@@ -69,6 +79,23 @@ export default function KinderGardenListComponent({ info }: InfoProps) {
             />
           </Summary>
         </DataGrid>
+
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={() => setModalIsOpen(false)}
+          contentLabel="Example Modal"
+        >
+          <div className="p-4">
+            <button
+              onClick={() => setModalIsOpen(false)}
+              className="float-right"
+            >
+              X
+            </button>
+            <h2 className="mb-4">Mini carte</h2>
+            {selectedAddress && <Map address={selectedAddress} />}
+          </div>
+        </Modal>
       </div>
     </>
   );
